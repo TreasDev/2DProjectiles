@@ -1,5 +1,6 @@
 from cx_Freeze import setup, Executable
 from distutils.core import setup
+import matplotlib
 base='Win32GUI'
 executable = [
     Executable("V1_2.py", base = base)
