@@ -128,18 +128,22 @@
   @media only screen and (max-width: 400px){
     .text{
         font-size: 5pt;
+    }
+    #maths{
+        grid-template-rows: 5% 95%;
     }  
     #maths-txt{
           text-align: justify;
       }
       .title{
-          font-size: 3vh;
+          font-size: 2vh;
       }
       #name{
           font-size: 10pt;
       }
       #install{
         grid-template-rows: 30% 70%;
+        height: 20vh;
       }
       #install-txt{
           padding-top: 0;
