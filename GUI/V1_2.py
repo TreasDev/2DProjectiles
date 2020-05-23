@@ -4,6 +4,7 @@ import matplotlib
 matplotlib.use("TkAgg")
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
+import mpl_toolkits
 #import webbrowser
 #from tkhtmlview import HTMLLabel
 #def vars
@@ -46,15 +47,19 @@ def plotgraph():
     canvas.get_tk_widget().grid(column=3, row=0, columnspan=4, rowspan=6, padx = 10, pady = 10)
     #plt.show(fig)
 #calculation button
-calc_butt = tk.Button(window, text="calculate", command=plotgraph).grid(row=2, column=0, columnspan=2, pady=15)
+calc_butt = tk.Button(window, text="calculate", command=plotgraph)
+calc_butt.grid(row=2, column=0, columnspan=2, pady=15)
 #output
-tof_label = tk.Label(window, text="Time of Flight [s]: ").grid(row=3, column=0, padx= 10, pady=15)
+tof_label = tk.Label(window, text="Time of Flight [s]: ")
+tof_label.grid(row=3, column=0, padx= 10, pady=15)
 tof_output = tk.Label(window)
 tof_output.grid(row=3, column=1)
-hd_label = tk.Label(window, text="Horizontal Displacement [m]: ").grid(row=4, column=0, padx=10, pady=15)
+hd_label = tk.Label(window, text="Horizontal Displacement [m]: ")
+hd_label.grid(row=4, column=0, padx=10, pady=15)
 hd_output = tk.Label(window)
 hd_output.grid(row=4, column=1)
-maxvert_label = tk.Label(window, text="Max vertical displacement [m]: ").grid(row=5, column=0, padx=10, pady=15)
+maxvert_label = tk.Label(window, text="Max vertical displacement [m]: ")
+maxvert_label.grid(row=5, column=0, padx=10, pady=15)
 maxvert_output = tk.Label(window)
 maxvert_output.grid(row=5, column=1)
 #graphs
@@ -77,4 +82,3 @@ link_label.grid(row=6, column=4)
 #link_label.bind("<Button-1>", lambda e: link())
 #run app
 window.mainloop()
-input() #get log output

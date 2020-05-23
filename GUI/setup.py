@@ -1,15 +1,15 @@
 from cx_Freeze import setup, Executable
-from distutils.core import setup
+#from setuptools import setup
 import matplotlib
+import mpl_toolkits
 base='Win32GUI'
 executable = [
-    Executable("V1_2.py", base = base)
+    Executable("V1_1.py", base = base)
 ]
-build_options = {'includes': ['matplotlib.backends.backend_tkagg'],
-                 "packages": ["tkinter", "tkinter.filedialog"]}
+build_options = {"packages": ["tkinter", "tkinter.filedialog", "numpy"]}
 setup(
-    name = "ProjectilesCalculator",
+    name = "Projectiles Calculator",
     options = {"build_exe": build_options},
-    version = "1.2",
+    version = "1.1",
     executables = executable
       )
