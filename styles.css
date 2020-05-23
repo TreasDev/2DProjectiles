@@ -4,6 +4,9 @@
     font-family: Consolas;
     background-color: #E8E8E8;
   }
+  html{
+      scroll-behavior: smooth;
+  }
   #navbar{
       display: grid;
       width: 100%;
