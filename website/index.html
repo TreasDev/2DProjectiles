@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2DProejctiles</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="Imgs/icon.png">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+        <div id="navbar">
+            <img src="Imgs/head-img.png" id="navbar-logo">
+            <ul id="nav-list">
+                <li class="navbar-txt"><a href="#install" class="nav-lnk">Install</a></li>
+                <li class="navbar-txt"><a href="#maths" class="nav-lnk">Maths</a></li>
+            </ul>
+        </div>
+    <div class="layout" id="maths">
+    <h2 class="title">Maths</h2>
+    <p class="text">
+        The position relative to the \(x\) axis is defined as: 
+        $$x = v \cos(\theta) t$$
+        The position relative to the \(y\) axis is defined as:
+        $$y = v \sin(\theta) t - \frac{g t^{2}}{2}$$
+        As \(\Delta y = 0\), the Time of flight can be found by setting the equation for \(y = 0\),
+        $$\Sigma t = \frac{2*v \sin(\theta)}{g}$$
+        The range (net \(x\) displacement) can be found by substituting \(\Sigma t\):
+        $$x_{max} = v \cos(\theta) \Sigma t $$
+        \(y_{max}\) occurs when \(v_{y}=0\) therefore:
+        $$v_{y} = \frac{\partial}{\partial t} \left(v \sin(\theta) t - \frac{g t^{2}}{2} \right) \Rightarrow $$
+        $$v_{y} = v \sin(\theta) - g t = 0 \Rightarrow$$
+        $$t_{y_{max}} = \frac{v\sin(\theta)}{g}$$
+        Substituting this value of \(t\) into \(y \Rightarrow\)
+        $$y_{max} = \frac{v^2 \sin^2(\theta)}{2g}$$
+    </p>
+    </div>
+    <div class="layout" id="install">
+    <h2 class="title">Install</h2>
+    <div class="text">
+    <h4>Windows</h4>
+    <p><a href="https://github.com/TreasDev/2DProjectiles/releases/tag/win_v1_1" class="install-lnk" target="_blank">V1.1 Download</a></p>
+    <p>V1.2 is currently not available as a application that can be downloaded 
+        but you can download the repo and run the script if you have python installed on your computer</p>
+    <h4>Linux</h4>
+    <p><a href="https://github.com/TreasDev/2DProjectiles/releases/tag/lin_v1_2" class="install-lnk" target="_blank">V1.2 Download</a></p>
+    </div>
+    </div>
+    <div id="fter">
+        <a href="https://twitter.com/TreasDev" target="_blank" id="twit" class="fter-lnk"><img class="fter-img" src="Imgs/Twitter_Social_Icon_Circle_White.png"></a>
+        <a href="https://github.com/TreasDev/2DProjectiles" target="_blank" id="git" class="fter-lnk"><img class="fter-img" src="Imgs/GitHub-Mark-Light-120px-plus.png"></a>
+        <a href="https://treasdev.github.io/" target="_blank" id="td-logo" class="fter-lnk"><img class="fter-img" src="Imgs/head-img.png"></a>
+        <p id="name">Alex Healey, TreasDev, &copy 2020</p>
+    </div>
+    </body>
+</html>

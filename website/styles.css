@@ -1,0 +1,125 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Consolas;
+    background-color: #E8E8E8;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+  #navbar{
+      display: grid;
+      width: 100%;
+      height: 20vh;
+      background-color: #191BA9;
+      grid-template-columns:30% 70%;
+  }
+  #navbar-logo{
+    grid-column: 1;
+    width: auto;
+    height: 100%;
+  }
+  #nav-list{
+      grid-column: 2;
+      list-style-type: none;
+      background-color: #191BA9;
+      
+  }
+  .navbar-txt{
+    background-color: #191BA9;
+    float: right;
+    margin-right: 10%;
+    margin-top: 8vh;
+  }
+  .nav-lnk{
+      background-color: #191BA9;
+      color: #5CC2F2;
+      text-decoration: none;
+      transition: transform 0.5s;
+  }
+  .nav-lnk:visited{
+      color: #5CC2F2;
+      text-decoration: none;
+  }
+  .nav-lnk:hover{
+      color: white;
+      font-size: 20pt;
+  }
+  .layout{
+      display: grid;
+      width: 100%;
+      grid-template-rows: 10% 20% 70%;
+      grid-template-columns: 10% 80% 10%;
+      margin-bottom: 3vh;
+  }
+  #maths{
+      margin-top: 2vh;
+  }
+  .title{
+      display: inline-block;
+      font-size: 100%;
+      grid-column: 2;
+      grid-row: 2;
+      font-size: 10vh;
+  }
+  .text{
+      grid-column: 2;
+      grid-row: 3;
+  }
+  .install-lnk{
+      text-decoration: none;
+      color: #5CC2F2;
+  }
+  .install-lnk:visited{
+      text-decoration: none;
+      color: #5CC2F2;
+  }
+  .install-lnk:hover{
+      color: #191BA9;
+  }
+  #fter{
+      height: 20vh;
+      width: 100%;
+      background-color: #191BA9;
+      display: grid;
+      grid-template-columns: 20% 20% 20% 20% 20%;
+      grid-template-rows: 10% 50% 20% 20%;
+      bottom: 0
+  }
+  #twit{
+      grid-column: 2;
+      grid-row: 2; 
+  }
+  #git{
+      grid-column: 3;
+      grid-row: 2;
+  }
+  #td-logo{
+      grid-column: 4;
+      grid-row: 2;
+  }
+  .fter-lnk{
+     background-color: #191BA9;
+     height: 100%;
+     width: auto;
+  }
+  .fter-img{
+     background-color: #191BA9;
+     height: 100%;
+     width: auto;
+     margin-left: 25%; 
+      transition: transform 1s;
+  }
+  .fter-img:hover{
+      transform: rotate(360deg);
+  }
+  #name{
+      grid-column-start: 2;
+      grid-column-end: 4;
+      grid-row: 3;
+      color: white;
+      background-color: #191BA9;
+      text-align: center;
+      margin-left: 40%;
+      margin-top: 1.5vh;
+  }
