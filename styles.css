@@ -52,10 +52,10 @@
   }
   #maths{
       margin-top: 2vh;
-      grid-template-rows: 10% 90%;
+      grid-template-rows: 20% 80%;
+      min-height: fit-content;
       text-align: center;
   }
-  
   .title{
       display: inline-block;
       grid-column: 2;
@@ -77,6 +77,9 @@
   }
   .install-lnk:hover{
       color: #191BA9;
+  }
+  #install{
+     min-height: fit-content;
   }
   #install-txt{
       padding-top: 1vh;
@@ -152,7 +155,10 @@
           padding-top: 0;
       }
   }
-    
+  @media only screen and (min-width: 400px){
+      #maths{
+          grid-template-rows: ;
+      }
 }
   /**chrome
 @media screen and (-webkit-min-device-pixel-ratio:0) { 
