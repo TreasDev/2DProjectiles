@@ -1,17 +1,17 @@
 import tkinter as tk
 import numpy as np
-import matplotlib
-matplotlib.use("TkAgg")
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
-from matplotlib.figure import Figure
-import mpl_toolkits
+#import matplotlib
+#matplotlib.use("TkAgg")
+#from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+#from matplotlib.figure import Figure
+#import mpl_toolkits
 #import webbrowser
 #from tkhtmlview import HTMLLabel
 #def vars
 g = 9.81 #[ms^-2]
 #def funcs
 window = tk.Tk()
-window.geometry("1280x720")
+#window.geometry("360x360")
 #window.iconphoto(False, tk.PhotoImage(file=r'icon.png'))
 window.title('Projectiles')
 #input
@@ -34,17 +34,17 @@ def plotgraph():
     #max vertical
     maxvert = ((u**2)*np.sin(theta)**2)/(2*g**2)
     maxvert_output.config(text="%.5e" % maxvert)
-    t = np.linspace(0, tof)
-    f = Figure()
-    fig = f.add_subplot(111)
-    fig.plot((u*np.cos(theta)*t), (u*np.sin(theta)*t - (g*t*t)/2))
-    fig.set_ylim(bottom=0)
-    fig.set_xlim(left=0)
-    fig.set_ylabel('Vertical Displacement [m]')
-    fig.set_xlabel('Horizontal Displacement [m]')
-    canvas = FigureCanvasTkAgg(f, window)
-    canvas.draw()
-    canvas.get_tk_widget().grid(column=3, row=0, columnspan=4, rowspan=6, padx = 10, pady = 10)
+    #t = np.linspace(0, tof)
+    #f = Figure()
+    #fig = f.add_subplot(111)
+    #fig.plot((u*np.cos(theta)*t), (u*np.sin(theta)*t - (g*t*t)/2))
+    #fig.set_ylim(bottom=0)
+    #fig.set_xlim(left=0)
+    #fig.set_ylabel('Vertical Displacement [m]')
+    #fig.set_xlabel('Horizontal Displacement [m]')
+    #canvas = FigureCanvasTkAgg(f, window)
+    #canvas.draw()
+    #canvas.get_tk_widget().grid(column=3, row=0, columnspan=4, rowspan=6, padx = 10, pady = 10)
     #plt.show(fig)
 #calculation button
 calc_butt = tk.Button(window, text="calculate", command=plotgraph)
@@ -63,22 +63,23 @@ maxvert_label.grid(row=5, column=0, padx=10, pady=15)
 maxvert_output = tk.Label(window)
 maxvert_output.grid(row=5, column=1)
 #graphs
-f = Figure()
-fig = f.add_subplot(111)
+#f = Figure()
+#fig = f.add_subplot(111)
 #fig.plot((u*np.cos(theta)*t), (u*np.sin(theta)*t - (g*t*t)/2))
-fig.set_ylim(bottom=0)
-fig.set_xlim(left=0)
-fig.set_ylabel('Vertical Displacement [m]')
-fig.set_xlabel('Horizontal Displacement [m]')
-canvas = FigureCanvasTkAgg(f, window)
-canvas.draw()
-canvas.get_tk_widget().grid(column=3, row=0, columnspan=4, rowspan=6, padx = 10, pady = 10)
+#fig.set_ylim(bottom=0)
+#fig.set_xlim(left=0)
+#fig.set_ylabel('Vertical Displacement [m]')
+#fig.set_xlabel('Horizontal Displacement [m]')
+#canvas = FigureCanvasTkAgg(f, window)
+#canvas.draw()
+#canvas.get_tk_widget().grid(column=3, row=0, columnspan=4, rowspan=6, padx = 10, pady = 10)
 #branding
 #name_label = HTMLLabel(window, html='<link rel="stylesheet" href="styles.css">Alex Healey, <a href= "https://treasdev.github.io/" style="text-decoration: none; color: black;">Treas Dev</a>, 2020, V1.2').grid(row=6, column=4)
 #def link():
 #    webbrowser.open_new("https://treasdev.github.io/")
-link_label = tk.Label(window, text="Alex Healey, Treas Dev, 2020, V1.2")
-link_label.grid(row=6, column=4)
+link_label = tk.Label(window, text="Alex Healey, Treas Dev, 2020, V1.1")
+link_label.config(anchor="center")
+link_label.grid(row=6, column=0, columnspan=2)
 #link_label.bind("<Button-1>", lambda e: link())
 #run app
 window.mainloop()
