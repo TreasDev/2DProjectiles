@@ -127,7 +127,14 @@
       margin-top: 1.5vh;
   }
   /**firefox**/
-  @-moz-document url-prefix() {
+  @media only screen and (max-width: 400px){
+      #maths-txt{
+          text-align: justify;
+      }
+      #name{
+          font-size: 10pt;
+      }
+  }
     
 }
   /**chrome
